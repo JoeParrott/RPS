@@ -4,65 +4,78 @@ console.log("Welcome to Rock Paper Scissors v0.1");
 
 // Player choice- use the readline module
 
-const readline = require("readline").createInterface({
+const readline = require('readline');
+
+const rl = readline.createInterface({
     input: process.stdin,
-    output: process.stout
+    output: process.stdout
 });
 
-readline.question("Please choose rock, paper or scissors\n", userResponse)
+rl.question('Please choose rock, paper or scissors\n', (answer) => {
 
-    function userResponse (response) {
 
-    // terminal chooses math.method
+        // what are we doing with user response?
+         answer.toLowerCase(userResponse); {
+            if userResponse != ("rock", "paper", "scissors");
+            console.log("Please choose, rock, paper or scissors");
 
-        let termOpt = ["rock", "paper", "scissors"];
-        let termChoice = termOpt[Math.floor(Math.random() * 3)];
+         }
+        {
 
-// compare, else if
-
-        const compare = (userResponse, termChoice) => {
-            if (userResponse === termChoice) {
-                console.log("This is a tie.");
-                return;
+        // terminal chooses math.method
+    
+            let termOpt = ["rock", "paper", "scissors"];
+            let termChoice = termOpt[Math.floor(Math.random() * 3)];
+    
+    // compare, else if
+    
+            const compare = (userResponse, termChoice) => {
+                if (userResponse === termChoice) {
+                    console.log("This is a tie.");
+                    return;
+        }
+                if (userResponse === "rock") {
+                    if (termChoice === "paper") {
+                        console.log("You lost.");
+                        return;
+            }
+                    else {
+                        console.log("You win.");
+                        return;
+            }
+        }
+                if (userResponse === "paper") {
+                    if (termChoice === "scissors") {
+                        console.log("You lost.");
+                        return;
+            }
+                    else {
+                        console.log("You win.");
+                        return;
+            }
+        }
+                if (userResponse === "scissors") {
+                    if (termChoice === "rock") {
+                        console.log("You lost.");
+                        return;
+            }
+                    else {
+                        console.log("You win.");
+                        return;
+            }
+        }
     }
-            if (userResponse === "rock") {
-                if (termChoice === "paper") {
-                    console.log("You lost.");
-                    return;
-        }
-                else {
-                    console.log("You win.");
-                    return;
-        }
+    // output winner
+    
     }
-            if (userResponse === "paper") {
-                if (termChoice === "scissors") {
-                    console.log("You lost.");
-                    return;
-        }
-                else {
-                    console.log("You win.");
-                    return;
-        }
-    }
-            if (userResponse === "scissors") {
-                if (termChoice === "rock") {
-                    console.log("You lost.");
-                    return;
-        }
-                else {
-                    console.log("You win.");
-                    return;
-        }
-    }
+    
+    
+    
+    
+    // loop to start?
+    
+    
+    
+
+
 }
-// output winner
-
-}
-
-
-
-
-// loop to start?
-
-
