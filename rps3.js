@@ -5,10 +5,10 @@ const readline = require('readline').createInterface({
     output: process.stdout
 });
 
-function userResponse (response) {
-    console.log("You chose: " + response);
-    const choice = ["rock" || "paper" || "scissors"];                                                          // is the input valid?
-    if (response != choice) {
+function userResponse (responseForUser) {
+    let response = responseForUser.toLowerCase();
+    console.log("You chose: " + responseForUser);                                                      // is the input valid?
+    if ((response != "rock") && (response != "paper") && (response != "scissors")) {
     console.log("Please select a valid option.");
     }
     else {
