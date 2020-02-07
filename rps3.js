@@ -7,8 +7,11 @@ const readline = require('readline').createInterface({
 
 function userResponse (response) {
     console.log("You chose: " + response);
-                                                                // is the input valid?
-    if (response === "rock" || "paper" || "scissors") {
+    const choice = ["rock" || "paper" || "scissors"];                                                          // is the input valid?
+    if (response != choice) {
+    console.log("Please select a valid option.");
+    }
+    else {
         let termOpt = ["rock", "paper", "scissors"];
         let termChoice = termOpt [Math.floor(Math.random() * 3)];
         console.log("Terminal chose: " + termChoice)
@@ -16,6 +19,7 @@ function userResponse (response) {
             if (response === termChoice) {
                 console.log("This is a tie.");
             }
+            else {
             if (response === "rock") {
                 if (termChoice === "paper") {
                     console.log("You lost.");
@@ -39,7 +43,7 @@ function userResponse (response) {
                 else {
                     console.log("You win.");
             }
-
+        }
         }
 
     }
@@ -47,9 +51,6 @@ function userResponse (response) {
 
 
     compare();
-}
-else {
-    console.log("Invalid option, please choose again.")
 }
     readline.close();
 }
